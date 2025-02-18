@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>HE THONG PHONG CHONG CHAY VA RO RI KHI GAS</title>
+</head>
+<body>
+    <div class="header">
+        <img src="img/bieutuong.jpg" width="130px" height="130px" >
+        <hr>
+        <div class="center" style="flex: auto;">
+            <h2>HE THONG PHONG CHONG CHAY VA RO RI KHI GAS</h2>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="content">
+        <div class="menu">
+            <h1>G1</h1>
+            <hr>
+            <ul id="menu-list">
+                <li onclick="openModal()"><a href="#them">Them</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="icon">
+                <div class="plus" style="flex-basis: 10%;">
+                    <i onclick="openModal1()" class="fa-sharp fa-regular fa-plus" style="font-size: 50px;"></i>
+                </div>
+                <div style="flex-basis: 30%;">
+                    <p>Nguong canh bao CO</p>
+                    <input type="range" min="1" max="1000" value="50" id="myRange1">
+                    <p><span id="demo1"></span></p>
+                </div>
+                <div style="flex-basis: 30%;">
+                    <p>Nguong canh bao Gas</p>
+                    <input type="range" min="1" max="1500" value="50" id="myRange2">
+                    <p><span id="demo2"></span></p>
+                </div>
+                <div style="flex-basis: 20%;">
+                    <p>Canh bao</p>
+                    <button id="toggleButton" class="button on" onclick="toggleButton()">ON</button>
+                </div>
+                <div style="flex-basis: 10%;">
+                    <img id="blinkingImage" src="img/hinh_canh_bao.png" width="70px" height="70px">
+                </div>
+            </div>
+            <div>
+                <div class="nhap">
+                    <div id="gasEntries"></div>
+                </div>
+                <div id="modal" class="modal">
+                    <form>
+                        <h3>Them</h3>
+                        <label for="newName">Ten moi:</label>
+                        <input type="text" id="newName" placeholder="Nhap ten moi">
+                        <button onclick="closeModal()">OK</button>
+                        <button onclick="closeModal()">Huy</button>
+                    </form>
+                </div>
+                <div id="modal1" class="modal">
+                    <form>
+                        <div>
+                            <h3>Them</h3>
+                            <label for="id">ID:</label>
+                            <input type="text" id="id" placeholder="Nhap ten ID">
+                            <label for="option">Chon lua:</label>
+                            <select id="option">
+                              <option value="Khi gas">Khi gas</option>
+                              <option value="Nong do khi CO">Nong do khi CO</option>
+                            </select>
+                            <button onclick="closeModal1()">OK</button>
+                            <button onclick="closeModal1()">Huy</button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+<script src="js.js"></script>
+</body>
+</html>
